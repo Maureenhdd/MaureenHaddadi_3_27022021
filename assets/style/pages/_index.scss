@@ -1,0 +1,64 @@
+@import "../utils/variables";
+
+.block_fonction__box,
+.block_fonction__content {
+  display: flex;
+  background-color: $grey;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.block_fonction__box {
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
+}
+
+.block_fonction_content_i,
+.block_fonction__number {
+  padding: 15px;
+  font-size: 20px;
+  color: darken($grey, $amount: 50);
+}
+
+.i--primary {
+  color: $primary-color;
+}
+
+.block_fonction__number {
+  margin-left: -16px;
+  margin-top: 12px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: white;
+}
+
+.block_fonction__txt {
+  font-weight: 700;
+}
+
+.block_restaurant {
+  background-color: $grey;
+  padding: 10px;
+  &__card {
+    width: 90%;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+}

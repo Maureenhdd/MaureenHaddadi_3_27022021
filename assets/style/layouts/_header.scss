@@ -1,0 +1,45 @@
+@import "../utils/variables";
+
+.block_fonction__title {
+  margin: 30px;
+}
+.navbar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+  padding: 10px;
+  position: relative;
+}
+
+.navbar__title {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.block_location {
+  display: flex;
+  justify-content: center;
+  background-color: darken($grey, $amount: 10);
+}
+
+.block_location__i {
+  padding: 15px;
+  font-size: 20px;
+}
+.block_explore {
+  background-color: $grey;
+  padding: 10px 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.block_explore__title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.block_explore__text {
+  text-align: center;
+  margin-top: 0;
+}

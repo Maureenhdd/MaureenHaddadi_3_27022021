@@ -7,13 +7,19 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
   padding: 10px;
   position: relative;
-}
-
-.navbar__title {
-  text-align: center;
-  font-family: "Shrikhand", cursive;
-  font-size: 2rem;
-  margin: 0;
+  &__title {
+    text-align: center;
+    font-family: "Shrikhand", cursive;
+    font-size: 2rem;
+    margin: 0;
+  }
+  &__i {
+    position: absolute;
+    left: 2rem;
+    top: 25px;
+    font-size: 1.2rem;
+    color: #000;
+  }
 }
 
 .block_location {

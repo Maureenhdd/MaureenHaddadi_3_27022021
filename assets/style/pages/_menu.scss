@@ -58,7 +58,9 @@
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
     animation: slide-in-bottom 0.5s;
-    // @include delay(3);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    @include delay(10);
     &:hover &__top {
       width: calc(100% - 85px);
     }
@@ -114,7 +116,7 @@
 
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(1000px);
+    transform: translateY(100vh);
     opacity: 0;
   }
   100% {

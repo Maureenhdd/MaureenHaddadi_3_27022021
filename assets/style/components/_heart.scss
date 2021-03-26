@@ -26,6 +26,6 @@
     rgba(255, 121, 218, 1) -14%,
     rgba(147, 86, 220, 1) 60%
   );
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

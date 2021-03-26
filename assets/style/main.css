@@ -147,7 +147,7 @@
 .first {
   opacity: 0;
   background: linear-gradient(175deg, #ff79da -14%, #9356dc 60%);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -517,6 +517,59 @@ body {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
   -webkit-animation: slide-in-bottom 0.5s;
           animation: slide-in-bottom 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.block_menu__card:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.block_menu__card:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.block_menu__card:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.block_menu__card:nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.block_menu__card:nth-child(5) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.block_menu__card:nth-child(6) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.block_menu__card:nth-child(7) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.block_menu__card:nth-child(8) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.block_menu__card:nth-child(9) {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.block_menu__card:nth-child(10) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .block_menu__card:hover .block_menu__card__top {
@@ -592,8 +645,8 @@ body {
 
 @-webkit-keyframes slide-in-bottom {
   0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
     opacity: 0;
   }
   100% {
@@ -605,8 +658,8 @@ body {
 
 @keyframes slide-in-bottom {
   0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
     opacity: 0;
   }
   100% {

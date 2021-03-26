@@ -1,0 +1,31 @@
+@import "../utils/variables";
+
+.block_heart_animate {
+  font-size: 30px;
+  position: relative;
+  padding: 0 40px 30px 0;
+}
+
+.block_heart_animate:hover .first {
+  opacity: 1;
+}
+.block_heart_animate:hover .second {
+  opacity: 0;
+}
+
+.first,
+.second {
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.first {
+  opacity: 0;
+  background: linear-gradient(
+    175deg,
+    rgba(255, 121, 218, 1) -14%,
+    rgba(147, 86, 220, 1) 60%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

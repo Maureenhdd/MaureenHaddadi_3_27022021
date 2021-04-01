@@ -123,6 +123,13 @@
   margin: 20px;
 }
 
+@media (min-width: 768px) {
+  .block__title {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
 .block_heart_animate {
   font-size: 30px;
   position: relative;
@@ -161,6 +168,13 @@ body {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .wrapper {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+
 .block_fonction_base, .block_fonction__content, .block_fonction__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,6 +184,13 @@ body {
   margin: auto;
   border-radius: 20px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .block_fonction_list {
+    width: 500px;
+    margin: auto;
+  }
 }
 
 .block_fonction__box {
@@ -222,6 +243,12 @@ body {
   padding: 10px;
 }
 
+@media (min-width: 768px) {
+  .block_restaurant {
+    padding: 30px;
+  }
+}
+
 .block_restaurant__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,6 +257,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .block_restaurant__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .block_restaurant__card {
@@ -242,6 +283,13 @@ body {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
   position: relative;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .block_restaurant__card {
+    width: 300px;
+    margin: 20px 10px;
+  }
 }
 
 .block_restaurant__img {
@@ -296,6 +344,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -306,6 +358,7 @@ body {
 
 .loader_content {
   border-radius: 50%;
+  margin-bottom: 50px;
   width: 50px;
   height: 50px;
   -webkit-animation: blur 1.5s linear infinite;
@@ -522,54 +575,19 @@ body {
   opacity: 0;
 }
 
-.block_menu__card:nth-child(1) {
+.block_menu__card:nth-of-type(1) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.block_menu__card:nth-child(2) {
+.block_menu__card:nth-of-type(2) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.block_menu__card:nth-child(3) {
+.block_menu__card:nth-of-type(3) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
-}
-
-.block_menu__card:nth-child(4) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.block_menu__card:nth-child(5) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-
-.block_menu__card:nth-child(6) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.block_menu__card:nth-child(7) {
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
-}
-
-.block_menu__card:nth-child(8) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-.block_menu__card:nth-child(9) {
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
-}
-
-.block_menu__card:nth-child(10) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
 }
 
 .block_menu__card:hover .block_menu__card__top {

@@ -1,6 +1,6 @@
 @mixin delay($number_child) {
   @for $i from 1 to ($number_child + 1) {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       animation-delay: (#{$i * 0.5s});
     }
   }

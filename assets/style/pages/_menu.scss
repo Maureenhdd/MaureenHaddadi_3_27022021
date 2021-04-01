@@ -60,7 +60,7 @@
     animation: slide-in-bottom 0.5s;
     animation-fill-mode: forwards;
     opacity: 0;
-    @include delay(10);
+    @include delay(3);
     &:hover &__top {
       width: calc(100% - 85px);
     }

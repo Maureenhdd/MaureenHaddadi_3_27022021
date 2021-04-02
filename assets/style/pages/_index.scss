@@ -1,10 +1,8 @@
 @import "../utils/variables";
 
 .wrapper {
-  @media (min-width: 768px) {
-    width: 70%;
-    margin: 20px auto;
-  }
+  max-width: 1280px;
+  margin: auto;
 }
 
 .block_fonction_base {
@@ -16,53 +14,53 @@
   text-align: center;
 }
 
-.block_fonction_list {
-  @media (min-width: 768px) {
-    width: 500px;
-    margin: auto;
+.block_fonction {
+  margin: 50px 0;
+
+  &_list {
+    @media (min-width: 768px) {
+      width: 500px;
+      margin: auto;
+    }
   }
-}
+  &__content {
+    @extend .block_fonction_base;
+    &_i {
+      padding: 15px;
+      font-size: 20px;
+      color: darken($grey, $amount: 50);
+    }
+  }
 
-.block_fonction__content {
-  @extend .block_fonction_base;
-}
-.block_fonction__box {
-  @extend .block_fonction_base;
-  justify-content: center;
-  margin: 20px auto;
-  padding: 10px 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
-}
+  &__box {
+    @extend .block_fonction_base;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
+  }
 
-.block_fonction_content_i,
-.block_fonction__number {
-  padding: 15px;
-  font-size: 20px;
-  color: darken($grey, $amount: 50);
+  &__number {
+    margin-left: -16px;
+    margin-top: 12px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: white;
+  }
+  &__txt {
+    font-weight: 700;
+  }
 }
 
 .i--primary {
   color: $primary-color;
 }
-
-.block_fonction__number {
-  margin-left: -16px;
-  margin-top: 12px;
-  background-color: $primary-color;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  color: white;
-}
-
-.block_fonction__txt {
-  font-weight: 700;
-}
-
 .block_restaurant {
   @media (min-width: 768px) {
     padding: 30px;
@@ -72,10 +70,13 @@
   &__list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      width: 80%;
+      margin: auto;
     }
   }
   &__card {
@@ -88,7 +89,7 @@
     position: relative;
     text-decoration: none;
     @media (min-width: 768px) {
-      width: 300px;
+      width: 400px;
       margin: 20px 10px;
     }
   }
@@ -97,6 +98,10 @@
     height: 200px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   &__badge {
     background-color: #99e2d0;
@@ -121,6 +126,9 @@
   }
 }
 
+.overflow {
+  overflow: hidden;
+}
 .loader {
   position: fixed;
   height: 100%;
@@ -198,6 +206,6 @@
 @keyframes loader {
   to {
     opacity: 0;
-    z-index: 0;
+    z-index: -10;
   }
 }

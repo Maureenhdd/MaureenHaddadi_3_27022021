@@ -2,9 +2,10 @@
 @import "../utils/mixins";
 
 .header__img {
-  width: 100%;
+  max-width: 100%;
   height: 300px;
   object-fit: cover;
+  width: 100%;
 }
 
 .block_menu {
@@ -26,6 +27,12 @@
   &__i {
     padding: 30px;
     font-size: 25px;
+  }
+  &__bottom {
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
   &__subtitle {
@@ -57,10 +64,10 @@
     display: flex;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
-    animation: slide-in-bottom 0.5s;
+    animation: cardAppear 0.5s;
     animation-fill-mode: forwards;
     opacity: 0;
-    @include delay(3);
+
     &:hover &__top {
       width: calc(100% - 85px);
     }
@@ -114,13 +121,23 @@
   transform: rotate(-180deg);
 }
 
-@keyframes slide-in-bottom {
+@keyframes cardAppear {
   0% {
-    transform: translateY(100vh);
+    transform: scale(0);
     opacity: 0;
   }
-  100% {
-    transform: translateY(0);
+  50% {
+    transform: scale(1.2);
     opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@for $i from 1 to 10 {
+  .delay-#{$i} {
+    animation-delay: #{$i * 0.1}s;
   }
 }

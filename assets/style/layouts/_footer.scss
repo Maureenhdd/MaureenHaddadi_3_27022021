@@ -1,4 +1,7 @@
 .footer {
+  @media (min-width: 768px) {
+    text-align: center;
+  }
   background-color: #353535;
   color: white;
   padding: 20px;
@@ -11,6 +14,8 @@
   &_link {
     display: flex;
     flex-direction: column;
+    transition: 0.2s;
+
     &__a {
       text-decoration: none;
       color: white;

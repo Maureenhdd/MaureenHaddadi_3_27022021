@@ -134,7 +134,7 @@
 @media (min-width: 768px) {
   .block__title {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -549,7 +549,7 @@ body {
 
 .block_menu__title {
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .block_menu__i {
@@ -588,6 +588,15 @@ body {
   margin-bottom: 60px;
 }
 
+@media (min-width: 1024px) {
+  .block_menu__submenu {
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: 33%;
+  }
+}
+
 .block_menu__card {
   background-color: white;
   margin: 20px 0;
@@ -607,10 +616,11 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+  width: 100%;
 }
 
 .block_menu__card:hover .block_menu__card__top {
-  width: calc(100% - 85px);
+  min-width: calc(100% - 85px);
 }
 
 .block_menu__card:hover .confirmation__i {
@@ -619,9 +629,12 @@ body {
 }
 
 .block_menu__card__top {
-  width: 100%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  min-width: calc(100% - 30px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .block_menu__card__title, .block_menu__card__txt, .block_menu__card__bottom__txt {
@@ -629,7 +642,11 @@ body {
 }
 
 .block_menu__card__title {
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.block_menu__card__txt {
+  font-size: 15px;
 }
 
 .block_menu__card__title, .block_menu__card__txt {
@@ -638,27 +655,21 @@ body {
   overflow: hidden;
 }
 
-.block_menu__card__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .block_menu__card__bottom__txt {
   font-weight: bold;
-  padding: 25px 15px 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  min-width: 40px;
+  padding-bottom: 8px;
+  margin-right: 10px;
 }
 
 .block_menu__confirmation {
   background-color: #99e2d0;
-  margin: 0 -80px 0 0;
-  width: 4rem;
+  width: 70px;
   height: 63px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -666,6 +677,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 0 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

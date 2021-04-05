@@ -10,12 +10,12 @@
   text-decoration: none;
   border-radius: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.356);
-  &:hover {
-    transform: scale(1.1);
-  }
 
   width: 235px;
   display: block;
   margin: 10px auto;
   text-align: center;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

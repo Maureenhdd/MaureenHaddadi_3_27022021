@@ -29,7 +29,7 @@
     font-size: 25px;
   }
   &__bottom {
-    @media (min-width: 1024px) {
+    @include desktop {
       display: flex;
       justify-content: space-around;
     }
@@ -52,12 +52,11 @@
   }
 
   &__submenu {
-    @media (min-width: 1024px) {
+    @include desktop {
       padding: 20px;
       box-sizing: border-box;
       max-width: 33%;
     }
-
     margin-bottom: 60px;
   }
 
@@ -69,7 +68,6 @@
     align-items: center;
     display: flex;
     overflow: hidden;
-    // justify-content: space-between;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
     animation: cardAppear 0.5s;
     animation-fill-mode: forwards;
@@ -78,7 +76,6 @@
 
     &:hover &__top {
       min-width: calc(100% - 85px);
-      // margin-right: -20px;
     }
     &:hover .confirmation__i {
       transform: rotate(0);

@@ -1,6 +1,8 @@
+@import "../utils/mixins";
+
 .block__title {
   margin: 20px;
-  @media (min-width: 768px) {
+  @include tablet {
     text-align: center;
     font-size: 25px;
   }

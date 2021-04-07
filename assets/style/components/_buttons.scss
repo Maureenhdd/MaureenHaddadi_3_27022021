@@ -1,11 +1,12 @@
 .btn {
-  background: linear-gradient(
+  background-color: $secondary-color;
+  background-image: linear-gradient(
     175deg,
-    $secondary-color -14%,
-    $primary-color 60%
+    rgba($secondary-color, 0.7) -14%,
+    rgba($primary-color, 0.9) 60%
   );
   transition: 0.2s;
-  padding: 20px 30px;
+  padding: 20px 0;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -15,6 +16,8 @@
   margin: 10px auto;
   text-align: center;
   &:hover {
+    background-color: #fff;
     transform: scale(1.1);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.356);
   }
 }
